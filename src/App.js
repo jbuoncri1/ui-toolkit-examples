@@ -1,40 +1,33 @@
-import { useEffect } from 'react'
+// import MaterializeCSS from './MaterializeCSS'
+// import ChakraUI from './ChakraUI'
+import React from 'react';
+import { createMuiTheme, ThemeProvider, withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 
-// import 'materialize-css/dist/css/materialize.min.css'
-// import M from 'materialize-css/dist/js/materialize.min.js'
-import 'semantic-ui-css/semantic.min.css'
-import { Button } from 'semantic-ui-react'
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: 'Roboto',
+//     h1: {
+//       color: '#009EDC'
+//     }
+//   }
+// })
+
+const CiscoBlueTypography = withStyles({
+  root: {
+    fontFamily: 'Roboto',
+    color: '#009EDC'
+  }
+})(Typography)
 
 const App = () => {
-  // useEffect(() => {
-  //   // Initialize Materialize CSS
-  //   M.AutoInit()
-  // }, [])
-
   return (
-    <div
-      className="ui container"
-    >
-      <h1
-        style={{
-          fontSize: 24,
-          fontWeight: 700,
-          fontFamily: 'Roboto'
-        }}
-      >
-        Welcome To Trellis
-      </h1>
-      <Button 
-        color="primary color"
-        style={{
-          borderRadius: 4,
-          fontFamily: 'Roboto',
-          width: 140,
-          height: 45
-        }}
-      >
-        Sign Up
-      </Button>
+    // <MaterializeCSS />
+    // <ChakraUI />
+    <div style={{ backgroundColor: 'black' }}>
+      <CiscoBlueTypography variant="h1">
+        Hello World
+      </CiscoBlueTypography>
     </div>
   )
 }
